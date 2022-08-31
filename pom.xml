@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nabu.frameworks</groupId>
 	<artifactId>storage</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>${nabu.frameworks-storage-version}</version>
 	<name>storage</name>
 	
 	<parent>
