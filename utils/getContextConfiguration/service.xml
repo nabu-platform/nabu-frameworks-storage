@@ -1,0 +1,67 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="af286fbe-dffb-432b-8474-2d5deff1e92b"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="281931c0-982c-4578-bb2a-7ef4ac652504"
+			label="input/context == null"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="4d123b23-f166-4281-be3c-e53e15541c78"
+				serviceId="nabu.utils.Runtime.getServiceContext"
+				resultName="resultd5cfaf798f554752a1a74a4704d27fd7"
+				temporaryMapping="true"
+				x="148"
+				y="75"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="fb2d045a-2151-4314-8714-4bee1f7c29d5"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resultd5cfaf798f554752a1a74a4704d27fd7/serviceContext</from>
+			<to>input/context</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="a7e7d555-1891-4ebd-b533-1d227baf28a5"
+			lineNumber="3">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="2fd39292-0361-4cab-a184-5b23e2cc3e2e"
+				serviceId="nabu.frameworks.storage.utils.searchContext"
+				resultName="result9d45396295304d9f9e330150becb1704"
+				temporaryMapping="true"
+				x="30"
+				y="30"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="1fe9e254-002a-4075-bee3-40b212292f7b"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/context</from>
+				<to>parameters/context</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="f7eed9d5-6fbb-4634-a5dc-28eb384065bc"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result9d45396295304d9f9e330150becb1704/results[0]</from>
+			<to>output/configuration</to>
+		</steps>
+	</steps>
+</sequence>

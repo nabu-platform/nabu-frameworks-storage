@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2022-08-31T13:21:40.880+02:00" lastModified="2022-08-31T14:14:07.349+02:00" leaf="true" version="11">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>java.util.TimeZone</references>
+    <references>nabu.utils.Server.uuid</references>
+    <references>nabu.utils.Date.now</references>
+    <references>nabu.frameworks.storage.utils.getContextConfiguration</references>
+    <references>java.util.UUID</references>
+    <references>nabu.utils.Runtime.getServiceContext</references>
+    <references>nabu.frameworks.storage.utils.generateUrn</references>
+    <references>nabu.utils.Runtime.getCorrelationId</references>
+    <references>nabu.frameworks.storage.database.types.storageConfiguration</references>
+    <references>java.lang.String</references>
+    <references>java.net.URI</references>
+    <references>java.io.InputStream</references>
+    <references>nabu.frameworks.storage.crud.storageEntry.services.create</references>
+</node>

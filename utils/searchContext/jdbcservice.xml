@@ -1,0 +1,6 @@
+<jdbcService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<outputDefinition>nabu.frameworks.storage.database.types.storageConfiguration</outputDefinition>
+	<sql>select * from ~storage_configurations
+where context is not null and (context = :context or :context like context || '.%')
+order by length(context) desc</sql>
+</jdbcService>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2022-08-31T13:08:10.991+02:00" lastModified="2022-08-31T13:17:25.622+02:00" leaf="true" version="19">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.utils.String.find</references>
+    <references>nabu.utils.Date.format</references>
+    <references>nabu.web.application.Services.information</references>
+    <references>nabu.utils.String.replace</references>
+    <references>java.util.TimeZone</references>
+    <references>nabu.utils.Server.getServerGroup</references>
+    <references>java.util.UUID</references>
+    <references>java.lang.String</references>
+    <references>java.net.URI</references>
+</node>

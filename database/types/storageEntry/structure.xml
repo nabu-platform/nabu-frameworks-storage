@@ -1,0 +1,14 @@
+<structure collectionName="storageEntries" name="storageEntry">
+    <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" primaryKey="true" type="java.util.UUID"/>
+    <field name="created" timezone="UTC" type="java.util.Date"/>
+    <field comment="The correlation id when this was created" name="correlationId" type="java.lang.String"/>
+    <field comment="You can set a reference id to point to an entity of your own for example." minOccurs="0" name="referenceId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field minOccurs="0" name="urn" type="java.net.URI"/>
+    <field comment="You can point to an external URL, e.g. from datastore or another system" minOccurs="0" name="uri" type="java.net.URI"/>
+    <field comment="Or you can store the data here" minOccurs="0" name="content" type="[B"/>
+    <field comment="This is the content type of the data, e.g. application/json" minOccurs="0" name="contentType" type="java.lang.String"/>
+    <field comment="A human readable name for this content" minOccurs="0" name="name" type="java.lang.String"/>
+    <field comment="If the bytes contain text, this is the encoding that was used to convert it." minOccurs="0" name="encoding" type="java.lang.String"/>
+    <field comment="The context of this storage item, you can set archival rules based on the context." minOccurs="0" name="context" type="java.lang.String"/>
+    <field comment="A longer description of this blob" minOccurs="0" name="description" type="java.lang.String"/>
+</structure>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cache>
+    <cacheProvider>nabu.frameworks.storage.utils.memoryCache</cacheProvider>
+    <service>nabu.frameworks.storage.utils.searchContext</service>
+    <enableInDevelopment>true</enableInDevelopment>
+</cache>

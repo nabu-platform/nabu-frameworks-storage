@@ -1,0 +1,78 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="5f4fd4b1-facc-49c3-b643-9abddaaa6320"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="4a430e8a-cdc7-491b-a364-854dfa919082"
+			label="input/urn != null"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="050647ed-fb1a-4c52-a8f9-9b8cca0cc82c"
+				serviceId="nabu.frameworks.storage.crud.storageEntry.services.list"
+				resultName="result51ee533b05af488bb60304d7bc4fd633"
+				temporaryMapping="true"
+				x="205"
+				y="177"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="ca834c6b-e5db-4e6b-b99a-e9037dfb726b"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/urn</from>
+				<to>filter/urn[0]</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="765f8e2e-c96a-43cd-acc7-99455cb49e49"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result51ee533b05af488bb60304d7bc4fd633/results[0]</from>
+			<to>result</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Switch"
+			disabled="false"
+			id="76cef924-d583-4013-b39f-e907e5125184"
+			lineNumber="3">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				comment="We have a valid uri, send it"
+				disabled="false"
+				id="23b5d78d-8931-4cc5-bfa9-2b3f699726cf"
+				label="result/uri != null"
+				lineNumber="4">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="5b95449b-c43e-41c8-b9f4-b41d374476e7"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>result/uri</from>
+				<to>output/url</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				comment="We assume its locally hosted"
+				disabled="false"
+				id="b842021c-bc33-455b-a620-ee8280b26bf0"
+				label="result/id != null"
+				lineNumber="5">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="f5d9e1e9-2762-49e6-819a-4b7284922d35"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>="storage:/" + result/id</from>
+				<to>output/url</to>
+			</steps>
+		</steps>
+	</steps>
+</sequence>

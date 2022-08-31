@@ -1,0 +1,8 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field minOccurs="0" name="context" type="java.lang.String"/>
+    </structure>
+    <structure name="output">
+        <structure collectionName="storageConfigurations" definition="nabu.frameworks.storage.database.types.storageConfiguration" minOccurs="0" name="configuration"/>
+    </structure>
+</structure>

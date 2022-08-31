@@ -1,0 +1,6 @@
+<structure interface="be.nabu.libs.datastore.api.URNManager.map" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure collectionName="storageConfigurations" definition="nabu.frameworks.storage.database.types.storageConfiguration" minOccurs="0" name="configuration"/>
+    <structure collectionName="storageEntries" definition="nabu.frameworks.storage.crud.storageEntry.types.createOutput" name="created"/>
+</structure>

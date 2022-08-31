@@ -1,0 +1,7 @@
+<structure interface="be.nabu.libs.datastore.api.Datastore.retrieve" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure definition="nabu.utils.types.UriComponents" minOccurs="0" name="components"/>
+    <field minOccurs="0" name="uuid" type="java.util.UUID"/>
+    <structure collectionName="storageEntries" definition="nabu.frameworks.storage.crud.storageEntry.types.output" name="result"/>
+</structure>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datastoreProvider>
+    <scheme>storage</scheme>
+    <retrieveService>nabu.frameworks.storage.providers.datastore.retrieve</retrieveService>
+    <propertiesService>nabu.frameworks.storage.providers.datastore.properties</propertiesService>
+    <storeService>nabu.frameworks.storage.providers.datastore.store</storeService>
+    <deleteService>nabu.frameworks.storage.providers.datastore.delete</deleteService>
+</datastoreProvider>

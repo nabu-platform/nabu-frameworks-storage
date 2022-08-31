@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<urnProvider>
+    <urnCreator>nabu.frameworks.storage.providers.datastore.urnCreator</urnCreator>
+    <urnResolver>nabu.frameworks.storage.providers.datastore.urnResolver</urnResolver>
+</urnProvider>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataModel>
+    <entries>
+        <synchronize>true</synchronize>
+        <x>54</x>
+        <y>85</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <x>833</x>
+        <y>246</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <x>193</x>
+        <y>93</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.storage.database.types.storageEntry</type>
+        <x>116</x>
+        <y>384</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <x>705</x>
+        <y>523</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.storage.database.types.storageConfiguration</type>
+        <x>830</x>
+        <y>571</y>
+    </entries>
+</dataModel>

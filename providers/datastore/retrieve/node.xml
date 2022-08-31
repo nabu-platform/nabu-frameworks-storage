@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2022-08-30T16:31:12.689+02:00" lastModified="2022-08-31T13:36:19.610+02:00" leaf="true" version="5">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.frameworks.datastore.Services.retrieve</references>
+    <references>nabu.utils.types.UriComponents</references>
+    <references>nabu.utils.String.replace</references>
+    <references>nabu.utils.Uri.toComponents</references>
+    <references>be.nabu.libs.datastore.api.Datastore.retrieve</references>
+    <references>java.net.URI</references>
+    <references>java.util.UUID</references>
+    <references>nabu.frameworks.storage.crud.storageEntry.services.list</references>
+    <references>nabu.frameworks.storage.crud.storageEntry.types.output</references>
+    <references>java.io.InputStream</references>
+    <references>nabu.frameworks.storage.crud.storageEntry.services.get</references>
+</node>

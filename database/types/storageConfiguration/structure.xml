@@ -1,0 +1,6 @@
+<structure collectionName="storageConfigurations" name="storageConfiguration">
+    <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" primaryKey="true" type="java.util.UUID"/>
+    <field name="name" type="java.lang.String"/>
+    <field comment="A template where you can choose how to structure your urn.&#10;&#10;For example you could put here&#10;&#10;{serverGroup}:{storageId}&#10;&#10;These variables will be filled in at runtime to generate for example &quot;urn:nabu-prd:123e4567e89b12d3a456426614174000&quot;&#10;&#10;Available variables (might be added to over time):&#10;&#10;- serverGroup&#10;- storageId&#10;- date:&lt;format&gt; for example you could say {date:yyyy-MM}&#10;- application:&lt;artifactId&gt; for example {application:portal.site.application} at which point we would get the host name&#10;" minOccurs="0" name="urnTemplate" type="java.lang.String"/>
+    <field comment="You can set up multiple mappings which will be chosen depending on the matching service context" minOccurs="0" name="context" type="java.lang.String"/>
+</structure>
