@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.datastore.provider.DatastoreProviderManager" created="2022-08-30T16:53:41.884+02:00" lastModified="2022-08-30T16:54:02.895+02:00" leaf="true" version="4">
-    <environmentId>apollo</environmentId>
+<node artifactManager="be.nabu.eai.module.datastore.provider.DatastoreProviderManager" created="2022-08-30T16:53:41.884+02:00" lastModified="2025-08-26T12:21:59.746+02:00" leaf="true" version="5">
+    <environmentId>ares</environmentId>
     <hidden>false</hidden>
+    <locked>false</locked>
     <properties/>
     <references>nabu.frameworks.storage.providers.datastore.retrieve</references>
     <references>nabu.frameworks.storage.providers.datastore.properties</references>

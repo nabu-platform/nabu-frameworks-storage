@@ -1,5 +1,5 @@
 <structure interface="be.nabu.libs.datastore.api.URNManager.resolve" name="pipeline">
     <structure name="input"/>
     <structure name="output"/>
-    <structure collectionName="storageEntries" definition="nabu.frameworks.storage.crud.storageEntry.types.output" minOccurs="0" name="result"/>
+    <structure collectionName="storageEntries" definition="nabu.frameworks.storage.crud.storageEntry.types.output" enricher="nabu.frameworks.storage.crud.storageEntry.services.list" minOccurs="0" name="result" persister="nabu.frameworks.storage.crud.storageEntry.batch.updateAll"/>
 </structure>

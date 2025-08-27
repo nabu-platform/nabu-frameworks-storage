@@ -2,6 +2,6 @@
     <structure name="input"/>
     <structure name="output"/>
     <structure definition="nabu.utils.types.UriComponents" minOccurs="0" name="components"/>
-    <field minOccurs="0" name="uuid" type="java.util.UUID"/>
-    <structure collectionName="storageEntries" definition="nabu.frameworks.storage.crud.storageEntry.types.output" name="result"/>
+    <field minOccurs="0" name="uuid" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <structure collectionName="storageEntries" definition="nabu.frameworks.storage.crud.storageEntry.types.output" enricher="nabu.frameworks.storage.crud.storageEntry.services.list" name="result" persister="nabu.frameworks.storage.crud.storageEntry.batch.updateAll"/>
 </structure>
