@@ -1,0 +1,119 @@
+<sequence id="0bb27314-c4f0-48d5-a8d3-1c4b237aed95">
+	<map id="08a853c6-0c85-4d4a-a8a5-5a9db0271dc4">
+		<invoke id="051ed55b-80ba-4e5b-8746-27b80499ba76"
+			resultName="result3c910444cef24d9287739b9a56025193"
+			serviceId="nabu.frameworks.storage.utils.getContextConfiguration"
+			x="30"
+			y="30">
+		</invoke>
+		<link id="cfb83791-eec1-406b-8fd9-ac4f841e2112">
+			<from>result3c910444cef24d9287739b9a56025193/configuration</from>
+			<to>configuration</to>
+		</link>
+		<invoke id="49282b42-0567-4fea-8d9d-4b42bf8be9ff"
+			resultName="result82f583c57115487dace4f787e626e182"
+			serviceId="nabu.utils.Server.uuid"
+			x="250"
+			y="148">
+		</invoke>
+		<link id="fa6390cf-44c0-4b36-8d84-fead537b6f39">
+			<from>result82f583c57115487dace4f787e626e182/uuid</from>
+			<to>uuid</to>
+		</link>
+	</map>
+	<map id="8bf54352-e5b0-498a-8201-97a027f0de73"
+		label="configuration/context == null">
+		<invoke id="e60ba2db-5fc9-4425-b97b-e9b4641d5413"
+			resultName="resultfcb19694774848d79d89c35a35c4ce94"
+			serviceId="nabu.utils.Runtime.getServiceContext"
+			x="84"
+			y="231">
+		</invoke>
+		<link id="f8d0e3d4-2db2-4c4d-92c8-9547a4564a74">
+			<from>resultfcb19694774848d79d89c35a35c4ce94/serviceContext</from>
+			<to>configuration/context</to>
+		</link>
+	</map>
+	<map id="d9ce098b-52c5-42e7-ad15-77dd8e1adc61">
+		<invoke id="488a9976-ff1f-4793-bc06-abfb99211634"
+			resultName="result24ce4d92fa6044379532fe5dae9e1f5a"
+			serviceId="nabu.frameworks.storage.utils.generateUrn"
+			x="132"
+			y="85">
+			<link id="e3f0d321-9381-4b98-ba6d-f262786b0ff1">
+				<from>configuration/urnTemplate</from>
+				<to>urnTemplate</to>
+			</link>
+			<link id="710832e0-52ff-4e48-a10b-47eddc8dbb29">
+				<from>uuid</from>
+				<to>storageId</to>
+			</link>
+			<link id="9a8edd0d-6754-42f6-bc7e-d097bbbf8068">
+				<from>input/timezone</from>
+				<to>timezone</to>
+			</link>
+		</invoke>
+		<link id="e1bece7a-b540-4626-84fc-d276d8d26211">
+			<from>result24ce4d92fa6044379532fe5dae9e1f5a/urn</from>
+			<to>output/uri</to>
+		</link>
+	</map>
+	<map id="1901f2df-6e43-44ab-a5e7-1d0f0557f56e"
+		comment="Store in database">
+		<invoke id="d87f95c7-1089-4942-9124-79e9929c0b56"
+			invocationOrder="1"
+			resultName="result73e50014eb444cad8f26a8b303fdb6dd"
+			serviceId="nabu.frameworks.storage.crud.storageEntry.services.create"
+			x="482"
+			y="72">
+			<link id="83b9c033-5d58-4b99-94ab-36564e8cbf95">
+				<from>input/name</from>
+				<to>instance/name</to>
+			</link>
+			<link id="5d26f704-8c63-4b0b-8bbd-beb1632c2b7f">
+				<from>input/contentType</from>
+				<to>instance/contentType</to>
+			</link>
+			<link id="8b79c9e9-74de-4281-a9b9-16c22c30a521">
+				<from>result85e82391607740e4990c1d9031fb9f38/date</from>
+				<to>instance/created</to>
+			</link>
+			<link id="90f1ad61-397f-463b-9591-095da43b50fa">
+				<from>resultf4f0e9e357b74f168df546060588da0e/correlationId</from>
+				<to>instance/correlationId</to>
+			</link>
+			<link id="603a0554-f242-4bbf-bbe7-5afc27592d3f">
+				<from>configuration/context</from>
+				<to>instance/context</to>
+			</link>
+			<link id="17c524a4-05ad-4e51-a492-25bfb5faa984">
+				<from>uuid</from>
+				<to>id</to>
+			</link>
+			<link id="20e2c45f-1e7e-4cfb-a3aa-538966b35afb">
+				<from>output/uri</from>
+				<to>instance/urn</to>
+			</link>
+			<link id="8d4ef0c0-93e1-48cb-80f4-329e12321f41">
+				<from>input/referenceId</from>
+				<to>instance/referenceId</to>
+			</link>
+			<link id="28587f131e8e446488abb4149f8cfd18">
+				<from>input/uri</from>
+				<to>instance/uri</to>
+			</link>
+		</invoke>
+		<invoke id="18ca0c6e-71c1-47c6-a4d2-f794e6d870a0"
+			resultName="result85e82391607740e4990c1d9031fb9f38"
+			serviceId="nabu.utils.Date.now"
+			x="45"
+			y="362">
+		</invoke>
+		<invoke id="b4f7e129-b97f-40c1-b5f5-c315e787abfe"
+			resultName="resultf4f0e9e357b74f168df546060588da0e"
+			serviceId="nabu.utils.Runtime.getCorrelationId"
+			x="65"
+			y="142">
+		</invoke>
+	</map>
+</sequence>
